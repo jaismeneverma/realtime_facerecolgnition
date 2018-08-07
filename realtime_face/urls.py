@@ -18,5 +18,6 @@ from django.contrib import admin
 from monitor import views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url('search/', views.search)
+    url(r'^search/', views.search),
+    url(r'^search/<string:roll_no>/', views.search),
 ]

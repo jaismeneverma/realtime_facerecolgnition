@@ -8,8 +8,25 @@
 
 <body>
     <div class="topnav">
-        <input type="text" placeholder="Search.." name="search">
-        <button type="submit"><i class="fa fa-search"></i></button>
+        <input type="text" placeholder="Search.." id="search">
+        <button type="submit" onclick="window.location.href='/search/'+document.getElementById('search').value"><i class="fa fa-search"></i></button>
+    </div>
+    <div id="status_table">
+        <h2>Status</h2>
+
+<table style="width:100%" border="2">
+  <tr>
+    <th>Roll Number</th>
+    <th>Status</th>
+    <th>Last Seen</th>
+  </tr>
+  <tr>
+    <td>{{ roll_no }}</td>
+    <td>{{ status }}</td>
+    <td>{{ date }}</td>
+  </tr>
+
+</table>
     </div>
 </body>
 </html>
