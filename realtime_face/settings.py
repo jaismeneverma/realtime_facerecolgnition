@@ -25,12 +25,13 @@ SECRET_KEY = '2(-9g44(7zuw_nok@__=jtkyv4&v^j(411te-agfup116nbk=h'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["Facerecog-env.ppnm3i9g4u.ap-south-1.elasticbeanstalk.com", "localhost"]
+ALLOWED_HOSTS = ["Facerecog-env.ppnm3i9g4u.ap-south-1.elasticbeanstalk.com", "localhost", "127.0.0.1"]
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'monitor',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
