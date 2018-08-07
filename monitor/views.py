@@ -2,6 +2,7 @@ from django.shortcuts import render
 
 # Create your views here.
 
+
 def search(request, roll_no=None):
     if not roll_no:
         return render(request, 'search_bar.html')

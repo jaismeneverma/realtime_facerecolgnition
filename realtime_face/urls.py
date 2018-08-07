@@ -16,8 +16,9 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from monitor import views
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^search/', views.search),
-    url(r'^search/<string:roll_no>/', views.search),
+    url(r'^search/(?P<roll_no>[a-zA-Z0-9]{0,9})', views.search),
+
 ]
