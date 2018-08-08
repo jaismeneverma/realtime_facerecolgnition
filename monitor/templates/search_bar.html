@@ -8,8 +8,10 @@
 
 <body>
     <div class="topnav">
-        <input type="text" placeholder="Search.." id="search">
-        <button type="submit" onclick="window.location.href='/search/'+document.getElementById('search').value"><i class="fa fa-search"></i></button>
+        <form action="/search">
+            <input required type="text" placeholder="Search.." id="search" name="search">
+            <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
     </div>
     <div id="status_table">
         <h2>Status</h2>

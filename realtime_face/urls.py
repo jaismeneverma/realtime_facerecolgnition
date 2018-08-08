@@ -19,6 +19,5 @@ from monitor import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^search/(?P<roll_no>[a-zA-Z0-9]{0,9})', views.search),
-
+    url(r'^search/', views.search),
 ]

@@ -3,11 +3,11 @@ from django.shortcuts import render
 # Create your views here.
 
 
-def search(request, roll_no=None):
+def search(request):
+    roll_no = request.GET.get('search')
     if not roll_no:
         return render(request, 'search_bar.html')
     else:
-        # get data and populate status and date
         status = "in"
         date = "12-5-1908"
         return render(request, 'search_bar.html', context={'status': status, 'roll_no': roll_no, 'date': date})
