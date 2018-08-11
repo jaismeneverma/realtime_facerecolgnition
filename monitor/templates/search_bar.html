@@ -19,15 +19,20 @@
 <table style="width:100%" border="2">
   <tr>
     <th>Roll Number</th>
+    <th>Semester</th>
+    <th>Name</th>
     <th>Status</th>
+    <th>ID</th>
     <th>Last Seen</th>
   </tr>
+    {% for row in rows %}
   <tr>
-    <td>{{ roll_no }}</td>
-    <td>{{ status }}</td>
+    {% for key, value in row.items %}
+    <td>{{ value }}</td>
+    {% endfor %}
     <td>{{ date }}</td>
   </tr>
-
+    {% endfor %}
 </table>
     </div>
 </body>
