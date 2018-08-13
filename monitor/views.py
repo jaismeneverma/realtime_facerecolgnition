@@ -9,9 +9,17 @@ def search(request):
     if not name:
         return render(request, 'search_bar.html')
     else:
-        rows = data_reader.get_row(name)
+        rows = data_reader.search_by_name(name)
         if rows:
-            date = "12-5-1908"
-            return render(request, 'search_bar.html', context={'rows': rows, 'date': date})
+            return render(request, 'search_bar.html', context={'rows': rows})
         else:
             return render(request, 'search_bar.html')
+			
+def search_by_status(request):
+    rows = data_reader.search_by_status()
+    print(rows)
+    if rows:
+        date = "12-5-1908"
+        return render(request, 'search_bar.html', context={'rows': rows})
+    else:
+        return render(request, 'search_bar.html')

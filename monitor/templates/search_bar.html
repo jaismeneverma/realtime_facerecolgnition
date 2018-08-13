@@ -8,31 +8,31 @@
 
 <body>
     <div class="topnav">
-        <form action="/search">
+        <form action="/search/">
             <input required type="text" placeholder="Search.." id="search" name="search">
             <button type="submit"><i class="fa fa-search"></i></button>
         </form>
     </div>
+	<a href = "/search_by_status/">Show everyone present </a>
     <div id="status_table">
         <h2>Status</h2>
 
 <table style="width:100%" border="2">
   <tr>
-    <th>Roll Number</th>
+    <th>Roll No.</th>
+    <th>Last Seen</th>
     <th>Semester</th>
     <th>Name</th>
     <th>Status</th>
     <th>ID</th>
-    <th>Last Seen</th>
   </tr>
-    {% for row in rows %}
+{% for row in rows %}
   <tr>
     {% for key, value in row.items %}
     <td>{{ value }}</td>
     {% endfor %}
-    <td>{{ date }}</td>
   </tr>
-    {% endfor %}
+{% endfor %}
 </table>
     </div>
 </body>

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/realtime_face.iml" filepath="$PROJECT_DIR$/.idea/realtime_face.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/realtime_facerecolgnition-master.iml" filepath="$PROJECT_DIR$/.idea/realtime_facerecolgnition-master.iml" />
     </modules>
   </component>
 </project>

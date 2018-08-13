@@ -20,4 +20,5 @@ from monitor import views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^search/', views.search),
+	url(r'^search_by_status/', views.search_by_status)
 ]
