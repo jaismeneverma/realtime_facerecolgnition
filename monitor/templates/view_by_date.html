@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form action="">
+        ID:
+        <input required type="text" name="id">
+        From:
+        <input required type="date" name="from">
+        To:
+        <input type="date" name="to">
+        <input type="submit">
+    </form>
+    <table style="width:100%" border="2">
+        <tr>
+            <th>Date</th>
+            <th>Hours Present</th>
+        </tr>
+    {% for date, hour in rows %}
+        <tr>
+        <td>{{ date}}</td>
+        <td>{{ hour }}</td>
+        </tr>
+    {% endfor %}
+    </table>
+
+</body>
+</html>
