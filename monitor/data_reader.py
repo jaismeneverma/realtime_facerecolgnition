@@ -1,7 +1,7 @@
 
 from botocore.exceptions import ClientError
 from builtins import print
-from monitor.helpers import get_in_time, getAllDatesBetweenTwoDates
+from monitor.helpers import get_in_time, getAllDatesBetweenTwoDates, time_addition
 import boto3
 from boto3.dynamodb.conditions import Key, Attr
 
@@ -65,5 +65,8 @@ def get_in_time_between_dates(m_id, from_date, to_date):
             datewise_inout_time_list.append(InOutList)
     for date in remove_dates:  # remove dates which have no records
         dates.remove(date)
-    return dates, datewise_total_in_time, datewise_inout_time_list
+    total_time = '00:00'
+    for time in datewise_total_in_time:
+        total_time = time_addition(total_time, time)
+    return dates, datewise_total_in_time, datewise_inout_time_list, total_time
 

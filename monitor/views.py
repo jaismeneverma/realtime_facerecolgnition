@@ -34,5 +34,6 @@ def search_by_date(request):
         return render(request, "view_by_date.html")
     if not to_date:
         to_date = str(datetime.date.today())
-    dates, hours, in_out_details = data_reader.get_in_time_between_dates(m_id, from_date, to_date)
-    return render(request, "view_by_date.html", context={'rows': list(zip(dates, hours))})
+    dates, hours, in_out_details, total_hours = data_reader.get_in_time_between_dates(m_id, from_date, to_date)
+    return render(request, "view_by_date.html", context={'rows': list(zip(dates, hours, in_out_details)),
+                                                         'total_hours': total_hours})

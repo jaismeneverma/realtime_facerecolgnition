@@ -2,10 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <meta charset="UTF-8">
+    <title></title>
 </head>
 <body>
-    <form action="">
+    <div class="container">
+    <form action="" class="navbar-form" role="search"">
         ID:
         <input required type="text" name="id">
         From:
@@ -14,18 +19,29 @@
         <input type="date" name="to">
         <input type="submit">
     </form>
-    <table style="width:100%" border="2">
+        <a href = "/search/" class="btn btn-link" style="padding-bottom:5%" role="button">View Current Status</a>
+    </div>
+
+    <div class="container">
+    <table class="table table-hover table-bordered table-responsive">
         <tr>
             <th>Date</th>
             <th>Hours Present</th>
+            <th>Details</th>
         </tr>
-    {% for date, hour in rows %}
+    {% for date, hour, details in rows %}
         <tr>
-        <td>{{ date}}</td>
-        <td>{{ hour }}</td>
+            <td>{{ date}}</td>
+            <td>{{ hour }}</td>
+            <td>{{ details }}</td>
         </tr>
     {% endfor %}
+        <tr>
+            <th>Total Hours</th>
+            <td colspan="1">{{ total_hours }}</td>
+        </tr>
     </table>
+    </div>
 
 </body>
 </html>
